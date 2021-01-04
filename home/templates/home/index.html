@@ -1,0 +1,15 @@
+{% extends 'home/template.html' %}
+
+{% block title %} HomePage {% endblock  %}
+
+{% block heading %}Playlists{% endblock  %}
+
+{% block body %}
+<ul>
+    {% for song in playlist %}
+    <li>{{ song }}</li>
+    {% endfor %}
+    <a href="add">Create a new playlist</a>
+    <a href="remove">Remove a playlist</a>
+</ul>    
+{% endblock  %}

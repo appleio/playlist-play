@@ -1,0 +1,14 @@
+{% extends 'home/template.html' %}
+
+{% block title %}Remove{% endblock %}
+
+{% block heading %}Remove a playlist!{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for playlist in playlists %}
+            <li>{{ playlist }}</li>
+            <button type="button" id="remove">Remove</button>
+        {% endfor %}
+    </ul>
+{% endblock %}

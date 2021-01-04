@@ -1,0 +1,13 @@
+{% extends 'home/template.html' %}
+
+{% block title %}Playlist{% endblock %}
+
+{% block heading %} Create a new playlist {% endblock %}
+
+{% block body %}
+    <form method="post" action="add">
+        {% csrf_token %}
+        {{ playlist }}
+        <input type="submit" name="Submit">
+    </form>
+{% endblock %}
